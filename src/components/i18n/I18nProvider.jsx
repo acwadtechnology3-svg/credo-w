@@ -14,11 +14,13 @@ function I18nReady({ children }) {
   useRouteNamespaces(location.pathname)
 
   useEffect(() => {
-    if (i18n.isInitialized) {
-      setReady(true)
-      return
+    let cancelled = false
+    initPromise.then(() => {
+      if (!cancelled) setReady(true)
+    })
+    return () => {
+      cancelled = true
     }
-    initPromise.then(() => setReady(true))
   }, [])
 
   if (!ready) {

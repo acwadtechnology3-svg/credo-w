@@ -32,8 +32,8 @@ export const NAMESPACES = [
   'ai',
 ]
 
-/** Namespaces loaded before first paint */
-export const BOOT_NAMESPACES = ['common', 'navbar']
+/** Namespaces loaded before first paint (landing + AI avoid .map on missing keys) */
+export const BOOT_NAMESPACES = ['common', 'navbar', 'landing', 'ai', 'rewards', 'errors']
 
 /** Route → extra namespaces to preload */
 export const ROUTE_NAMESPACES = {
