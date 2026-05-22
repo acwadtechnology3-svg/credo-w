@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useAuthStore } from '../store/authStore'
-import { isDemoMode } from '../config/demoMode.js'
+import { useApiMocks } from '../config/demoMode.js'
 import { resolveDemoMock } from './demoMocks.js'
 import { normalizeApiPayload } from './normalizeResponse.js'
 
@@ -27,7 +27,7 @@ function pathFromConfig(config) {
   return joined.startsWith('/') ? joined : `/${joined}`
 }
 
-if (isDemoMode) {
+if (useApiMocks) {
   client.defaults.adapter = (config) => {
     const data = normalizeApiPayload(
       pathFromConfig(config),
@@ -76,7 +76,7 @@ client.interceptors.response.use(
       } catch {
         isRefreshing = false
         useAuthStore.getState().logout()
-        if (!isDemoMode) window.location.href = '/login'
+        if (!useApiMocks) window.location.href = '/login'
       }
     }
     return Promise.reject(error)

@@ -1,7 +1,7 @@
-import { isDemoMode } from '../../config/demoMode'
+import { useApiMocks } from '../../config/demoMode'
 
 export default function DemoModeBanner() {
-  if (!isDemoMode) return null
+  if (!useApiMocks) return null
 
   return (
     <div

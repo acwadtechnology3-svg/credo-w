@@ -10,7 +10,7 @@ import { toast } from '../../components/shared/Toast'
 import { useTranslation } from 'react-i18next'
 import { useLocale } from '../../i18n/hooks/useLocale.js'
 import LanguageSwitcher from '../../components/i18n/LanguageSwitcher'
-import { isDemoMode } from '../../config/demoMode'
+import { useApiMocks } from '../../config/demoMode'
 
 export default function LoginPage() {
   const { t } = useTranslation('auth')
@@ -25,7 +25,7 @@ export default function LoginPage() {
   const navigate = useNavigate()
 
   const handleGoogleLogin = async () => {
-    if (isDemoMode) {
+    if (useApiMocks) {
       toast.info('تسجيل Google معطّل في نسخة العرض — استخدم تسجيل الدخول التجريبي')
       return
     }

@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useAuthStore } from '../store/authStore'
 import client from '../api/client'
 import { mapUserForStore } from '../lib/mapUser'
-import { isDemoMode, DEMO_API_USER } from '../config/demoMode.js'
+import { useApiMocks, DEMO_API_USER } from '../config/demoMode.js'
 
 export const useAuth = () => {
   const { user, token, isAuthenticated, login, logout, hasRole, authReady } = useAuthStore()
@@ -14,7 +14,7 @@ export const useInitAuth = () => {
 
   useEffect(() => {
     const restore = async () => {
-      if (isDemoMode) {
+      if (useApiMocks) {
         login(mapUserForStore(DEMO_API_USER), 'demo-access-token')
         setAuthReady(true)
         return

@@ -6,6 +6,7 @@ import Logo from '../../components/ui/Logo'
 import Icon from '../../components/ui/Icon'
 import client from '../../api/client'
 import { toast } from '../../components/shared/Toast'
+import { useApiMocks } from '../../config/demoMode.js'
 
 const SIDE_LABELS = {
   LEFT: 'الجانب الأيسر (A)',
@@ -207,6 +208,15 @@ export default function RegisterPage() {
   }, [searchParams])
 
   useEffect(() => {
+    if (useApiMocks) {
+      setSetup({
+        ready: true,
+        canWrite: true,
+        isFirstUserSlot: false,
+        issues: [],
+      })
+      return
+    }
     client
       .get('/health/setup')
       .then(({ data }) => setSetup(data))
@@ -217,7 +227,7 @@ export default function RegisterPage() {
           issues: [
             {
               code: 'SERVER',
-              messageAr: 'السيرفر غير متصل. شغّل npm run dev في مجلد المشروع.',
+              messageAr: 'السيرفر غير متصل — شغّل npm run dev أو اضبط VITE_API_URL على Vercel.',
               fix: 'npm run dev',
             },
           ],
@@ -325,7 +335,9 @@ export default function RegisterPage() {
               <div className="auth-register-callout" style={{ marginBottom: 16, borderColor: 'var(--danger-edge)', background: 'var(--danger-soft)' }}>
                 <span className="ico" style={{ background: 'var(--danger)' }}>!</span>
                 <div>
-                  <strong style={{ display: 'block', marginBottom: 6, color: 'var(--text-1)' }}>التسجيل متوقف — إعداد قاعدة البيانات</strong>
+                  <strong style={{ display: 'block', marginBottom: 6, color: 'var(--text-1)' }}>
+                    {setup.issues?.[0]?.messageAr || 'التسجيل متوقف — تحقق من السيرفر وقاعدة البيانات'}
+                  </strong>
                   <ul style={{ margin: 0, paddingInlineStart: 18, lineHeight: 1.6 }}>
                     {(setup.issues || []).map((issue) => (
                       <li key={issue.code}>
