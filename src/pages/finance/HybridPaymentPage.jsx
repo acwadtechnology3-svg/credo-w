@@ -14,6 +14,7 @@ import {
 import { createCheckoutSession } from '../../api/checkout.api'
 import PageLoader from '../../components/shared/PageLoader'
 import { toast } from '../../components/shared/Toast'
+import { asArray } from '../../lib/safeData.js'
 import '../../styles/wallet-page.css'
 
 const STATUS_LABEL = {
@@ -244,7 +245,7 @@ export default function HybridPaymentPage() {
         <section className="finance-pay-card">
           <h2>طريقة الدفع الخارجي</h2>
           <div className="finance-methods-grid">
-            {(methods || [])
+            {asArray(methods)
               .filter((m) => m.method_type !== 'internal_wallet' && m.code !== 'cmoney')
               .map((m) => (
                 <button

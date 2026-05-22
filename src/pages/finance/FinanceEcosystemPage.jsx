@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query'
 import { useNavigate } from 'react-router-dom'
 import { getFinanceWallets, getFinanceLedger } from '../../api/finance.api'
 import PageLoader from '../../components/shared/PageLoader'
+import { asArray } from '../../lib/safeData.js'
 import '../../styles/wallet-page.css'
 
 const WALLET_ICONS = {
@@ -33,7 +34,7 @@ export default function FinanceEcosystemPage() {
 
   if (isLoading) return <PageLoader />
 
-  const visible = (wallets || []).filter((w) => w.is_visible !== false)
+  const visible = asArray(wallets).filter((w) => w.is_visible !== false)
 
   return (
     <div className="wallet-page finance-ecosystem" dir="rtl">

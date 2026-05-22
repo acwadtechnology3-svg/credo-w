@@ -13,6 +13,7 @@ import Icon from '../ui/Icon'
 import UserAvatar from '../ui/UserAvatar'
 import NotificationPanel from '../notifications/NotificationPanel'
 import NotificationDetailModal from '../notifications/NotificationDetailModal'
+import { asArray } from '../../lib/safeData.js'
 
 export default function Topbar({ onMenuClick, onOpenSearch }) {
   const location = useLocation()
@@ -45,9 +46,9 @@ export default function Topbar({ onMenuClick, onOpenSearch }) {
     onSuccess: () => qc.invalidateQueries({ queryKey: ['notifications'] }),
   })
 
-  const cartCount = (cartData?.items || []).reduce((n, item) => n + (item.quantity || 0), 0)
-  const unread = notifData?.unreadCount || 0
-  const notifications = notifData?.notifications || []
+  const cartCount = asArray(cartData?.items).reduce((n, item) => n + (item.quantity || 0), 0)
+  const unread = notifData?.unreadCount ?? notifData?.unread ?? 0
+  const notifications = asArray(notifData?.notifications ?? notifData?.items)
 
   useEffect(() => {
     const onDocClick = (e) => {

@@ -4,6 +4,7 @@ import SectionShell, { SectionDivider } from '../components/core/SectionShell'
 import Reveal from '../components/core/Reveal'
 import { useLandingCopy } from '../../i18n/hooks/useLandingCopy'
 import { useTranslation } from 'react-i18next'
+import { asArray } from '../../lib/safeData.js'
 
 const ICONS = { layers: Layers, building: Building2, brain: Brain }
 const LAYER_ICONS = [Layers, Building2, Brain]
@@ -23,7 +24,7 @@ export default function EcosystemSection() {
         align="center"
       />
       <div className="ld-container ld-grid-3">
-        {ecosystemLayers.map((card, i) => {
+        {asArray(ecosystemLayers).map((card, i) => {
           const Icon = (card.icon && ICONS[card.icon]) || LAYER_ICONS[i] || Layers
           return (
             <Reveal key={card.title} delay={i * 0.1}>

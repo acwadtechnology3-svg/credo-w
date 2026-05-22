@@ -6,6 +6,7 @@ import VoiceOrb from '../components/voice/VoiceOrb'
 import { useLandingCopy } from '../../i18n/hooks/useLandingCopy'
 import { useTranslation } from 'react-i18next'
 import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion'
+import { asArray } from '../../lib/safeData.js'
 
 export default function VoiceAISection() {
   const { voiceAi } = useLandingCopy()
@@ -91,7 +92,7 @@ export default function VoiceAISection() {
             <p className="ld-eyebrow" style={{ marginTop: 24 }}>
               {t('askLabel')}
             </p>
-            {voiceAi.prompts.map((prompt, i) => (
+            {asArray(voiceAi?.prompts).map((prompt, i) => (
               <button
                 key={prompt}
                 type="button"

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { asArray } from '../../../../lib/safeData.js'
 
 const TIER_COLORS = {
   bronze: '#cd7f32',
@@ -9,8 +10,8 @@ const TIER_COLORS = {
 }
 
 export default function ProfileAchievementsTab({ hub }) {
-  const achievements = hub?.achievements || []
-  const timeline = hub?.rankTimeline || []
+  const achievements = asArray(hub?.achievements)
+  const timeline = asArray(hub?.rankTimeline)
   const unlocked = achievements.filter((a) => a.unlocked).length
 
   return (

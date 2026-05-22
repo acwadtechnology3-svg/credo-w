@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useLocale } from './useLocale.js'
+import { asArray } from '../../lib/safeData.js'
 
 /** Structured landing copy from i18n landing namespace */
 export function useLandingCopy() {
@@ -8,10 +9,14 @@ export function useLandingCopy() {
   const { locale } = useLocale()
 
   return useMemo(() => {
-    const get = (key, opts) => t(key, { returnObjects: true, ns: 'landing', ...opts })
+    const get = (key, opts) => {
+      const v = t(key, { returnObjects: true, ns: 'landing', ...opts })
+      return Array.isArray(v) || (v && typeof v === 'object') ? v : asArray(v)
+    }
+    const getList = (key, opts) => asArray(get(key, opts))
 
     return {
-      storyBeats: get('storyBeats'),
+      storyBeats: getList('storyBeats'),
       navSections: [
         { id: 'ecosystem', label: t('navbar:sections.ecosystem') },
         { id: 'vision', label: t('navbar:sections.vision') },
@@ -28,23 +33,26 @@ export function useLandingCopy() {
         lead: t('hero.lead'),
         sub: t('hero.sub'),
       },
-      heroStats: get('hero.stats'),
-      ecosystemLayers: get('ecosystem.layers'),
-      vision: get('vision'),
-      leadershipPillars: get('leadership.pillars'),
-      orgFeatures: get('organization.features'),
-      growthSteps: get('growth.steps'),
-      ranks: get('ranks'),
-      rewards: get('rewards'),
-      liveMetrics: get('metrics'),
-      testimonials: get('testimonials'),
+      heroStats: getList('hero.stats'),
+      ecosystemLayers: getList('ecosystem.layers'),
+      vision: (() => {
+        const v = get('vision')
+        return typeof v === 'object' && v ? { ...v, tags: asArray(v.tags) } : { tags: [] }
+      })(),
+      leadershipPillars: getList('leadership.pillars'),
+      orgFeatures: getList('organization.features'),
+      growthSteps: getList('growth.steps'),
+      ranks: getList('ranks'),
+      rewards: getList('rewards'),
+      liveMetrics: getList('metrics'),
+      testimonials: getList('testimonials'),
       voiceAi: {
         eyebrow: t('ai:voice.eyebrow', { ns: 'ai' }),
         title: t('ai:voice.title', { ns: 'ai' }),
         titleAr: t('ai:voice.titleSub', { ns: 'ai' }),
         subtitle: t('ai:voice.subtitle', { ns: 'ai' }),
-        prompts: t('ai:voice.prompts', { returnObjects: true, ns: 'ai' }),
-        introLines: t('ai:voice.introLines', { returnObjects: true, ns: 'ai' }),
+        prompts: asArray(t('ai:voice.prompts', { returnObjects: true, ns: 'ai' })),
+        introLines: asArray(t('ai:voice.introLines', { returnObjects: true, ns: 'ai' })),
       },
       progressionStats: [
         { label: t('rewards:progression.achievements', { ns: 'rewards' }), value: 84 },

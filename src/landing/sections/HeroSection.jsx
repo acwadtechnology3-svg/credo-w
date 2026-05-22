@@ -8,6 +8,7 @@ import { useLandingCopy } from '../../i18n/hooks/useLandingCopy'
 import { useTranslation } from 'react-i18next'
 import { useAuthStore } from '../../store/authStore'
 import SceneErrorBoundary from '../../components/shared/SceneErrorBoundary'
+import { asArray } from '../../lib/safeData.js'
 
 const HeroLogoScene = lazy(() => import('../components/three/HeroLogoScene'))
 
@@ -61,7 +62,7 @@ export default function HeroSection() {
 
           <Reveal delay={0.32}>
             <div className="ld-hero-stats">
-              {heroStats.map((s) => (
+              {asArray(heroStats).map((s) => (
                 <div key={s.num} className="ld-hero-stat">
                   <span className="ld-eyebrow" style={{ margin: 0, fontSize: 9 }}>
                     {s.num}

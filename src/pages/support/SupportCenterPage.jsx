@@ -18,6 +18,7 @@ import SupportQuickMessages from '../../support/components/SupportQuickMessages'
 import { getCategoryById } from '../../support/constants'
 import Icon from '../../components/ui/Icon'
 import { toast } from '../../components/shared/Toast'
+import { asArray } from '../../lib/safeData.js'
 import '../../support/styles/support.css'
 
 function formatTime(iso) {
@@ -72,11 +73,12 @@ export default function SupportCenterPage({ previewMode = false }) {
 
   const canSend = isAuthenticated && !previewMode
 
-  const { data: tickets = [] } = useQuery({
+  const { data: ticketsRaw } = useQuery({
     queryKey: ['support-tickets'],
     queryFn: getMyTickets,
     enabled: canSend,
   })
+  const tickets = asArray(ticketsRaw)
 
   const { data: ticketDetail, refetch: refetchTicket } = useQuery({
     queryKey: ['support-ticket', selectedId],

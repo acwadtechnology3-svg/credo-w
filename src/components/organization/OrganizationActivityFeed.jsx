@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useQuery } from '@tanstack/react-query'
 import { getActivityFeed } from '../../api/organization.api'
+import { asArray } from '../../lib/safeData.js'
 
 const SEVERITY_CLASS = {
   info: '',
@@ -17,7 +18,7 @@ export default function OrganizationActivityFeed({ agencyId, liveItems = [], fil
     refetchInterval: 60_000,
   })
 
-  const merged = [...liveItems, ...(data?.items || [])]
+  const merged = [...asArray(liveItems), ...asArray(data?.items)]
   const seen = new Set()
   const items = merged.filter((item) => {
     const key = item.id || `${item.eventType}-${item.at}`

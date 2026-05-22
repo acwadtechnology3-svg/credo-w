@@ -5,6 +5,7 @@ import Topbar from './Topbar'
 import { useSocket } from '../../hooks/useSocket'
 import { useLocale } from '../../i18n/hooks/useLocale.js'
 import FloatingSupportButton from '../support/FloatingSupportButton'
+import ErrorBoundary from '../shared/ErrorBoundary'
 
 export default function AppLayout() {
   useSocket()
@@ -40,7 +41,9 @@ export default function AppLayout() {
           onOpenSearch={() => {}}
         />
         <main className="app-content franchise-content" dir={dir}>
-          <Outlet />
+          <ErrorBoundary>
+            <Outlet />
+          </ErrorBoundary>
         </main>
         <FloatingSupportButton />
       </div>

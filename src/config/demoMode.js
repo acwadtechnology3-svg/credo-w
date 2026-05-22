@@ -1,14 +1,15 @@
 /**
- * Vercel / frontend-only demo deployment.
- * Enabled when VITE_DEMO_MODE=true or production build has no VITE_API_URL.
+ * Demo mode is opt-in via VITE_DEMO_MODE=true (Vercel preview / client walkthrough).
+ * Production deploys must set VITE_API_URL to the live backend — do not rely on mocks.
  */
-export const isDemoMode =
-  import.meta.env.VITE_DEMO_MODE === 'true' ||
-  (import.meta.env.PROD && !import.meta.env.VITE_API_URL)
+export const isDemoMode = import.meta.env.VITE_DEMO_MODE === 'true'
+
+export const isProductionBuild = import.meta.env.PROD
+
+export const hasApiUrl = Boolean(import.meta.env.VITE_API_URL?.trim())
 
 export const isSocketsEnabled =
-  !isDemoMode &&
-  Boolean(import.meta.env.VITE_SOCKET_URL || import.meta.env.DEV)
+  !isDemoMode && Boolean(import.meta.env.VITE_SOCKET_URL || import.meta.env.DEV)
 
 /** API user shape returned by /auth/me mocks */
 export const DEMO_API_USER = {

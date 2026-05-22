@@ -12,6 +12,7 @@ import {
 } from '../../api/gamification.api'
 import { useSocket } from '../../hooks/useSocket'
 import { toast } from '../../components/shared/Toast'
+import { asArray } from '../../lib/safeData.js'
 import '../../styles/progression-hub.css'
 
 const RARITY_GLOW = {
@@ -172,7 +173,7 @@ export default function ProgressionHubPage() {
 
       {(hub?.active_events || []).length > 0 && (
         <div className="ph-event-banner">
-          🔥 Live: {hub.active_events.map((e) => e.name).join(' · ')} — limited-time multipliers active
+          🔥 Live: {asArray(hub?.active_events).map((e) => e.name).join(' · ')} — limited-time multipliers active
         </div>
       )}
 
@@ -251,7 +252,7 @@ export default function ProgressionHubPage() {
         <div className="ph-grid">
           <div className="ph-card">
             <h3 style={{ margin: '0 0 12px', fontSize: 16 }}>Prestige Path</h3>
-            {hub?.prestige_catalog?.map((tier) => {
+            {asArray(hub?.prestige_catalog).map((tier) => {
               const unlocked =
                 (p.prestige_tier || 'none') !== 'none' &&
                 (hub.prestige_catalog.find((x) => x.tier_key === p.prestige_tier)?.sort_order ?? 0) >=
@@ -275,7 +276,7 @@ export default function ProgressionHubPage() {
             {(hub?.boosters || []).length === 0 ? (
               <p style={{ color: '#a0a0b0', fontSize: 13 }}>No active boosters — complete missions!</p>
             ) : (
-              hub.boosters.map((b) => (
+              asArray(hub?.boosters).map((b) => (
                 <div key={b.id} style={{ fontSize: 13, marginBottom: 8 }}>
                   {b.game_booster_definitions?.label} · {b.multiplier}x until{' '}
                   {new Date(b.expires_at).toLocaleDateString()}

@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query'
 import { motion } from 'framer-motion'
 import { getAgencyProfile, getMyAgency, getAgencyAnalytics } from '../../api/agencies.api'
 import PageLoader from '../../components/shared/PageLoader'
+import { asArray } from '../../lib/safeData.js'
 import '../../styles/team-guild.css'
 
 export default function AgencyProfilePage() {
@@ -127,11 +128,11 @@ export default function AgencyProfilePage() {
           </section>
         )}
 
-        {agency.achievements?.length > 0 && (
+        {asArray(agency?.achievements).length > 0 && (
           <section style={{ marginTop: 24 }}>
             <h3 style={{ fontSize: 14, color: 'var(--text-3)' }}>إنجازات الوكالة</h3>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-              {agency.achievements
+              {asArray(agency.achievements)
                 .filter((a) => a.is_unlocked)
                 .map((a) => (
                   <span key={a.key} className="guild-badge" title={a.description}>

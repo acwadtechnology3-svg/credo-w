@@ -4,6 +4,7 @@ import { getOrganizationHub } from '../../api/organization.api'
 import { useOrganizationRealtime } from '../../hooks/useOrganizationRealtime'
 import OrganizationActivityFeed from '../../components/organization/OrganizationActivityFeed'
 import TreeNetworkFlow from '../../components/organization/TreeNetworkFlow'
+import { asArray } from '../../lib/safeData.js'
 
 export default function OrganizationHubPage() {
   const { data, isLoading } = useQuery({
@@ -67,7 +68,7 @@ export default function OrganizationHubPage() {
             <div className="org-hub__missions module-card module-card-body">
               <h4>🎯 مهام نشطة</h4>
               <ul>
-                {(data?.profile?.missions || [])
+                {asArray(data?.profile?.missions)
                   .filter((m) => !m.is_completed)
                   .slice(0, 4)
                   .map((m) => (

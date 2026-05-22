@@ -1,8 +1,10 @@
 import client from './client'
+import { asArray } from '../lib/safeData.js'
 
 export const getProgressionHub = () => client.get('/gamification/hub').then((r) => r.data)
 
-export const getLeaderboards = () => client.get('/gamification/leaderboards').then((r) => r.data)
+export const getLeaderboards = () =>
+  client.get('/gamification/leaderboards').then((r) => asArray(r.data))
 
 export const getLeaderboard = (key, period = 'all') =>
   client.get(`/gamification/leaderboards/${key}`, { params: { period } }).then((r) => r.data)
