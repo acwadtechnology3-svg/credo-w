@@ -51,6 +51,30 @@ export function resolveDemoMock(config) {
   if (path.includes('/auth/logout')) {
     return { ok: true }
   }
+  if (path.includes('/auth/register') && method === 'post') {
+    return {
+      message: 'تم إنشاء الحساب (وضع العرض — سجّل الدخول بالحساب التجريبي)',
+      status: 'active',
+      user: { ...DEMO_API_USER, email: 'demo@credow.com' },
+    }
+  }
+
+  if (path.includes('/health/setup')) {
+    return {
+      ready: true,
+      canWrite: true,
+      ranksCount: 5,
+      usersCount: 1,
+      hasAdmin: true,
+      isFirstUserSlot: false,
+      usingPublishableKey: false,
+      issues: [],
+    }
+  }
+
+  if (path.includes('/public/join/resolve')) {
+    return { ok: true, agency: null, sponsor: null, placementSide: null }
+  }
 
   if (path === '/dashboard' || path.endsWith('/dashboard')) {
     return {

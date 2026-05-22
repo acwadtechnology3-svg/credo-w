@@ -327,7 +327,7 @@ export default function RegisterPage() {
                 <div>
                   <strong style={{ display: 'block', marginBottom: 6, color: 'var(--text-1)' }}>التسجيل متوقف — إعداد قاعدة البيانات</strong>
                   <ul style={{ margin: 0, paddingInlineStart: 18, lineHeight: 1.6 }}>
-                    {setup.issues.map((issue) => (
+                    {(setup.issues || []).map((issue) => (
                       <li key={issue.code}>
                         {issue.messageAr}
                         {issue.fix && (

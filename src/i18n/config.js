@@ -39,7 +39,7 @@ export const BOOT_NAMESPACES = ['common', 'navbar', 'landing', 'ai', 'rewards', 
 export const ROUTE_NAMESPACES = {
   '/': ['landing'],
   '/login': ['auth'],
-  '/register': ['auth', 'onboarding'],
+  '/register': ['auth', 'onboarding', 'errors'],
   '/dashboard': ['dashboard', 'packages'],
   '/packages': ['packages'],
   '/agencies': ['agencies'],
