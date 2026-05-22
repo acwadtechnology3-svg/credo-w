@@ -1,0 +1,156 @@
+.mlm-intel__title {
+  font-size: 1.45rem;
+  background: linear-gradient(135deg, #6BE4FF, var(--credo-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mlm-intel__sub {
+  color: var(--text-2);
+  font-size: 0.9rem;
+}
+
+.mlm-intel__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.mlm-metric-card {
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.85rem;
+  border-top: 2px solid var(--accent);
+}
+
+.mlm-metric-card__label {
+  font-size: 0.65rem;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.mlm-metric-card__value {
+  display: block;
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.mlm-metric-card__sub {
+  font-size: 0.65rem;
+  color: var(--text-3);
+}
+
+.mlm-intel__panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+  .mlm-intel__panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mlm-panel h3 {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.mlm-balance-viz {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  height: 100px;
+  margin-bottom: 0.75rem;
+}
+
+.mlm-balance-viz__leg {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 40px;
+  border-radius: 8px 8px 0 0;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+}
+
+.mlm-balance-viz__leg--l {
+  background: linear-gradient(180deg, rgba(196, 184, 255, 0.5), transparent);
+}
+
+.mlm-balance-viz__leg--r {
+  background: linear-gradient(180deg, rgba(107, 228, 255, 0.5), transparent);
+}
+
+.mlm-balance-viz__match {
+  text-align: center;
+  padding: 0.5rem;
+  background: var(--surface-2);
+  border: 1px solid var(--line-purple);
+  border-radius: 10px;
+  box-shadow: 0 0 16px rgba(123, 108, 246, 0.25);
+}
+
+.mlm-panel__carry,
+.mlm-panel__est {
+  font-size: 0.8rem;
+  color: var(--text-2);
+}
+
+.mlm-payout-summary {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mlm-payout-summary strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.mlm-comm-list,
+.mlm-events-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mlm-comm-list li,
+.mlm-events-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 0.8rem;
+}
+
+.mlm-status {
+  font-size: 0.65rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  background: var(--surface-3);
+}
+
+.mlm-status--completed,
+.mlm-status--paid {
+  color: #4ade80;
+}
+
+.mlm-status--pending,
+.mlm-status--calculated {
+  color: #f5c542;
+}
+
+.mlm-events-list__type {
+  font-weight: 600;
+  color: var(--soft-lavender);
+}

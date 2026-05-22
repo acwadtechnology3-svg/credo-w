@@ -1,0 +1,38 @@
+{
+  "ecosystem": "المنظومة",
+  "agencies": "الوكالات",
+  "packages": "الباقات",
+  "rewards": "المكافآت",
+  "about": "عن كريدو",
+  "faq": "الأسئلة",
+  "ai": "Credo AI",
+  "academy": "الأكاديمية",
+  "community": "المجتمع",
+  "partners": "الشركاء",
+  "support": "الدعم",
+  "start": "ابدأ",
+  "login": "دخول",
+  "register": "انضم",
+  "dashboard": "لوحة التحكم",
+  "close": "إغلاق",
+  "badges": { "new": "جديد" },
+  "explore": "استكشف",
+  "menuTitle": "بوابة المنظومة",
+  "loginHint": "لديك حساب؟",
+  "sections": {
+    "ecosystem": "المنظومة",
+    "vision": "الرؤية",
+    "organization": "التنظيم",
+    "progression": "التقدّم",
+    "credoAi": "Credo AI",
+    "cta": "ابدأ"
+  },
+  "menus": {
+    "ecosystemDesc": "طبقات الفرص والبنية الرقمية",
+    "agenciesDesc": "وكالات حية وقيادة مترابطة",
+    "packagesDesc": "مسارات ترقية ذكية",
+    "rewardsDesc": "اقتصاد مكافآت شفاف",
+    "aiDesc": "إرشاد بلغتك",
+    "faqDesc": "إجابات فورية"
+  }
+}

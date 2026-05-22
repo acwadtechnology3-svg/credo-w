@@ -1,0 +1,44 @@
+{
+  "brand": "Credo AI",
+  "voice": {
+    "eyebrow": "Credo AI · Voice Guide",
+    "title": "Ask Credo",
+    "titleSub": "Your intelligent guide inside the ecosystem",
+    "subtitle": "More than a chatbot — a voice companion for onboarding, expansion, and leadership.",
+    "micLabel": "Tap to speak",
+    "listening": "Listening…",
+    "thinking": "Thinking…",
+    "prompts": [
+      "How do I start my leadership journey?",
+      "What are the opportunity layers in Credo W?",
+      "How do digital agencies work?",
+      "Explain the rewards system"
+    ],
+    "introLines": [
+      "Hello. I'm Credo AI — your guide inside the ecosystem.",
+      "I can explain expansion, agencies, and rewards.",
+      "Tap the microphone and ask about your journey."
+    ]
+  },
+  "panel": {
+    "title": "Credo AI",
+    "subtitle": "Guidance in your language",
+    "placeholder": "Ask about the ecosystem, packages, or agencies…",
+    "send": "Send"
+  },
+  "systemPrompt": "Always respond in the user's selected language. Tone: institutional, confident, modern.",
+  "states": {
+    "listening": "● Listening",
+    "speaking": "◉ Speaking",
+    "idle": "Tap to interact"
+  },
+  "listeningHint": "Listening… speak or pick a question below.",
+  "choosePrompt": "Pick a question below and I'll explain the ecosystem — or start from registration.",
+  "askLabel": "Ask Credo AI",
+  "replies": [
+    "Your leadership journey starts with joining, building your team, and activating your opportunity layer — every step visible in one dashboard.",
+    "Opportunity layers: onboarding, digital presence, agency expansion, and rewards — each unlocks new tools and eligibility.",
+    "Digital agencies: discover, join, or launch with a professional profile and live command center.",
+    "Rewards: C Money, Pearls, expansion bonuses, and secure withdrawals — transparent financial architecture."
+  ]
+}

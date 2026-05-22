@@ -1,0 +1,250 @@
+/**
+ * Mobile-first polish for the franchise app shell and common modules.
+ * Imported after core layout rules in index.css.
+ */
+
+/* ─── Safe areas & touch ─── */
+@supports (padding: max(0px)) {
+  .app-content {
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+
+  @media (max-width: 1023px) {
+    .app-content {
+      padding-bottom: calc(72px + env(safe-area-inset-bottom));
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .btn-icon,
+  .topbar-menu-btn,
+  .topbar-cart,
+  .topbar-bell,
+  .topbar-profile {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .nav-link,
+  .nav-section-btn,
+  .franchise-sidebar button[type='button'] {
+    min-height: 44px;
+  }
+
+  input,
+  select,
+  textarea,
+  .input {
+    font-size: 16px;
+  }
+}
+
+/* ─── Drawer sidebar: RTL-aware (Arabic default) ─── */
+@media (max-width: 1023px) {
+  .franchise-sidebar {
+    left: auto;
+    right: auto;
+    inset-inline-start: 0;
+  }
+
+  html.rtl .franchise-sidebar,
+  [dir='rtl'] .franchise-sidebar {
+    transform: translateX(100%);
+  }
+
+  html.ltr .franchise-sidebar,
+  [dir='ltr'] .franchise-sidebar {
+    transform: translateX(-100%);
+  }
+
+  .franchise-sidebar.is-open {
+    transform: translateX(0) !important;
+    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.45);
+  }
+
+  html.rtl .franchise-sidebar.is-open,
+  [dir='rtl'] .franchise-sidebar.is-open {
+    box-shadow: 8px 0 40px rgba(0, 0, 0, 0.45);
+  }
+}
+
+/* ─── Topbar: two-row layout on phones ─── */
+@media (max-width: 767px) {
+  .franchise-topbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding-inline: 12px;
+    padding-bottom: max(10px, env(safe-area-inset-bottom, 0px));
+  }
+
+  .topbar-start {
+    width: 100%;
+    flex: none;
+  }
+
+  .topbar-title {
+    font-size: 17px;
+    line-height: 1.25;
+  }
+
+  .topbar-actions {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 6px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 2px 0 4px;
+    mask-image: linear-gradient(
+      to inline-end,
+      transparent,
+      #000 12px,
+      #000 calc(100% - 24px),
+      transparent
+    );
+  }
+
+  .topbar-actions::-webkit-scrollbar {
+    display: none;
+  }
+
+  .topbar-invite {
+    margin-inline-start: auto;
+    flex-shrink: 0;
+  }
+
+  .topbar-lang .ld-lang-code {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .btn,
+  .nav-link,
+  .topbar-menu-btn {
+    touch-action: manipulation;
+  }
+}
+
+@media (max-width: 479px) {
+  .topbar-search {
+    display: none;
+  }
+
+  .notif-panel {
+    position: fixed;
+    inset-inline: 12px;
+    top: auto;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    width: auto;
+    max-height: min(70vh, 520px);
+  }
+
+  .notif-modal-backdrop {
+    padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom));
+    align-items: flex-end;
+  }
+
+  .notif-modal {
+    max-height: 92dvh;
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+/* ─── Tables & cards ─── */
+.table-scroll-x {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -4px;
+  padding: 0 4px;
+}
+
+.table-scroll-x .module-table {
+  min-width: 280px;
+}
+
+@media (max-width: 640px) {
+  .module-page,
+  .page-enter {
+    padding: 14px 12px;
+  }
+
+  .module-card-header,
+  .module-card-body {
+    padding-inline: 12px;
+  }
+
+  .rank-stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .rank-stats-grid > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: start !important;
+    padding: 10px 12px;
+    background: var(--surface-0);
+    border-radius: 10px;
+    border: 1px solid var(--line-soft);
+  }
+
+  .dashboard-bv-row {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .dashboard-bv-divider {
+    justify-content: center !important;
+    padding: 4px 0;
+    font-size: 13px;
+  }
+
+  .dashboard-metrics-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .admin-panel__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .admin-tabs::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ─── FAB: clear home indicator ─── */
+@media (max-width: 1023px) {
+  .support-fab {
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    inset-inline-end: calc(16px + env(safe-area-inset-right, 0px));
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* Nav indicator — logical edge */
+html.rtl .nav-active-bar,
+[dir='rtl'] .nav-active-bar {
+  left: auto;
+  right: -10px;
+}
+
+html.ltr .nav-active-bar,
+[dir='ltr'] .nav-active-bar {
+  right: auto;
+  left: -10px;
+}

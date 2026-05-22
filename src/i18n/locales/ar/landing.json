@@ -1,0 +1,173 @@
+{
+  "storyBeats": [
+    "ادخل المنظومة",
+    "اكتشف الفرصة",
+    "افهم الرؤية",
+    "شاهد النظام",
+    "اشعر بالتقدّم",
+    "افهم المكافآت",
+    "عِش الهيبة",
+    "انضم للحركة"
+  ],
+  "hero": {
+    "eyebrow": "منصة تنظيم رقمي · الجيل القادم",
+    "title": "كريدو W",
+    "titleEn": "Next-Generation Digital Organization",
+    "lead": "بنية تحتية ذكية لنمو الأعمال الرقمية — قيادة، وكالات، توسع، ومكافآت في منظومة واحدة.",
+    "sub": "ليس موقعًا. حركة أعمال رقمية مدعومة بالذكاء الاصطناعي — للقادة الذين يبنون المستقبل.",
+    "ctaDashboard": "لوحة التحكم",
+    "ctaStart": "ابدأ رحلتك",
+    "ctaExplore": "اكتشف المنظومة",
+    "stats": [
+      { "num": "01", "title": "توسع ذكي", "en": "Smart Expansion" },
+      { "num": "02", "title": "قيادة مترابطة", "en": "Connected Leadership" },
+      { "num": "03", "title": "اقتصاد رقمي", "en": "Digital Economy" }
+    ]
+  },
+  "ecosystem": {
+    "title": "منظومة متكاملة",
+    "subtitle": "طبقات فرص مترابطة — من الانضمام إلى قيادة منظمة كاملة",
+    "layers": [
+      {
+        "title": "طبقات الفرصة",
+        "en": "Opportunity Layers",
+        "desc": "مسارات نمو متعددة — من الانضمام إلى بناء منظمة كاملة بخطوات واضحة."
+      },
+      {
+        "title": "وكالات رقمية",
+        "en": "Digital Agencies",
+        "desc": "اكتشف، انضم، أو أطلق وكالة بملف احترافي ولوحة قيادة حية."
+      },
+      {
+        "title": "ذكاء تشغيلي",
+        "en": "Operational AI",
+        "desc": "تحليلات، أتمتة، وإرشاد — قرارات أسرع بثقة مؤسسية."
+      }
+    ]
+  },
+  "vision": {
+    "title": "رؤية تُحوّل الطموح إلى بنية",
+    "titleEn": "Vision That Scales Ambition",
+    "subtitle": "Credo W منصة تنظيم رقمية تجمع القيادة، الفرق، التوسع، والمكافآت — لتشعر أنك داخل اقتصاد رقمي متصّل، لا أداة معزولة.",
+    "tags": [
+      { "label": "بداية قوية" },
+      { "label": "فرق متصلة" },
+      { "label": "بنية آمنة" },
+      { "label": "نمو قابل للقياس" },
+      { "label": "ذكاء اصطناعي" },
+      { "label": "توسع إقليمي" }
+    ]
+  },
+  "leadership": {
+    "pillars": [
+      {
+        "title": "قيادة رقمية",
+        "desc": "أدوات قرار، رؤية فريق، ومؤشرات نمو — بمستوى مؤسسات التكنولوجيا."
+      },
+      {
+        "title": "تنظيم ذكي",
+        "desc": "هيكل واضح يربط الأفراد بالوكالات والفرص دون تعقيد تشغيلي."
+      },
+      {
+        "title": "نجاح جماعي",
+        "desc": "منصة تكافئ التوسع المشترك — نموك يعزّز المنظومة بأكملها."
+      }
+    ]
+  },
+  "organization": {
+    "features": [
+      { "label": "تنظيم حي", "en": "Live Organization" },
+      { "label": "فرق متصلة", "en": "Connected Teams" },
+      { "label": "حجم أعمال", "en": "Growth Metrics" },
+      { "label": "وكالات", "en": "Agency Layer" }
+    ]
+  },
+  "growth": {
+    "steps": [
+      { "step": "01", "title": "ادخل المنظومة", "desc": "انضمام سلس عبر دعوة أو وكالة — onboarding ذكي من أول لحظة." },
+      { "step": "02", "title": "ابنِ حضورك", "desc": "فريق، وكالة، ومؤشرات — كلها مرئية في لوحة واحدة." },
+      { "step": "03", "title": "فعّل الطبقة", "desc": "باقات وترقيات تلقائية تفتح طبقات فرص جديدة." },
+      { "step": "04", "title": "نمُ بثقة", "desc": "محفظة، مكافآت، وسحب — بنية مالية فاخرة وشفافة." }
+    ]
+  },
+  "ranks": [
+    { "id": "starter", "label": "Starter", "ar": "مبتدئ", "tier": 1 },
+    { "id": "builder", "label": "Builder", "ar": "باني", "tier": 2 },
+    { "id": "leader", "label": "Leader", "ar": "قائد", "tier": 3 },
+    { "id": "elite", "label": "Elite", "ar": "نخبة", "tier": 4 },
+    { "id": "legend", "label": "Legend", "ar": "أسطورة", "tier": 5 }
+  ],
+  "rewards": [
+    { "label": "C Money", "value": "بنية مالية داخلية", "icon": "wallet" },
+    { "label": "Pearls", "value": "ولاء ومكافآت", "icon": "gem" },
+    { "label": "Payouts", "value": "سحب آمن", "icon": "arrow" },
+    { "label": "Growth Pool", "value": "مكافآت توسع", "icon": "percent" }
+  ],
+  "metrics": [
+    { "value": "12K+", "label": "قادة نشطون", "en": "Active Leaders" },
+    { "value": "840+", "label": "وكالة رقمية", "en": "Digital Agencies" },
+    { "value": "14", "label": "دولة", "en": "Markets" },
+    { "value": "99.2%", "label": "استقرار المنظومة", "en": "Uptime" }
+  ],
+  "testimonials": [
+    {
+      "quote": "أخيرًا منصة تشعرك أنك تبني مؤسسة رقمية — الوضوح، السرعة، والهيبة البصرية غيّروا طريقة قيادتنا للفريق.",
+      "name": "سارة المنصوري",
+      "role": "قائدة وكالة",
+      "agency": "Credo Gulf",
+      "country": "الإمارات",
+      "rank": "Elite"
+    },
+    {
+      "quote": "التقدّم والرتب ليست زينة — محرّك حقيقي للطموح. الفريق يشعر أنه داخل نظام نخبوي.",
+      "name": "Karim Al-Rashid",
+      "role": "مدير توسع",
+      "agency": "Vector Agency",
+      "country": "السعودية",
+      "rank": "Legend"
+    },
+    {
+      "quote": "من الدقيقة الأولى تفهم: هذا مختلف. ذكاء، حركة، وعمق — كمنتج ممول وليس موقع تجريبي.",
+      "name": "نادية حلمي",
+      "role": "مؤسسة وكالة",
+      "agency": "Helios Digital",
+      "country": "مصر",
+      "rank": "Leader"
+    }
+  ],
+  "cta": {
+    "title": "جاهز لقيادة الجيل القادم؟",
+    "subtitle": "انضم إلى منظومة تُبنى للتوسع العالمي — بثقة مؤسسية من اليوم.",
+    "primary": "ابدأ الآن",
+    "secondary": "تحدث مع Credo AI"
+  },
+  "footer": {
+    "product": "المنتج",
+    "company": "الشركة",
+    "legal": "قانوني",
+    "newsletter": "ابقَ على اطلاع",
+    "newsletterPlaceholder": "بريدك الإلكتروني",
+    "subscribe": "اشترك"
+  },
+  "faq": {
+    "title": "أسئلة شائعة",
+    "subtitle": "كل ما تحتاج معرفته قبل الانضمام"
+  },
+  "sections": {
+    "ecosystem": {
+      "beat": "اكتشف الفرصة",
+      "eyebrow": "منظومة Credo W",
+      "title": "اقتصاد رقمي قابل للتوسع",
+      "titleEn": "Scalable Digital Ecosystem",
+      "subtitle": "طبقات فرص، وكالات، وذكاء تشغيلي — بنية واحدة لنمو الأعمال الرقمية."
+    },
+    "cta": {
+      "beat": "انضم للحركة",
+      "title": "انضم للحركة الرقمية",
+      "titleEn": "Join the Credo W Movement",
+      "subtitle": "منصة ممولة المستوى — ابدأ رحلتك أو عد إلى لوحتك.",
+      "footnote": "إعداد فوري · بدون تعقيد · تجربة premium",
+      "login": "تسجيل الدخول"
+    }
+  }
+}

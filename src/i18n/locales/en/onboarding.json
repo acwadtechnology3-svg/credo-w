@@ -1,0 +1,17 @@
+{
+  "welcome": "Welcome to Credo W",
+  "step1": "Complete your profile",
+  "step2": "Choose your path",
+  "step3": "Join an agency or team",
+  "step4": "Activate your package",
+  "skip": "Skip for now",
+  "finish": "Finish setup",
+  "tour": {
+    "next": "Next",
+    "prev": "Previous",
+    "done": "Done",
+    "sidebar": "Navigate ecosystem sections from here.",
+    "wallet": "Track C Money and rewards from your wallet.",
+    "tree": "Your network tree shows live expansion."
+  }
+}

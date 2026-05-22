@@ -1,0 +1,17 @@
+{
+  "title": "المكافآت",
+  "subtitle": "اقتصاد رقمي شفاف — C Money، Pearls، وسحب آمن",
+  "cMoney": "C Money",
+  "pearls": "Pearls",
+  "payouts": "السحوبات",
+  "growthPool": "صندوق التوسع",
+  "achievements": "الإنجازات",
+  "challenges": "التحديات",
+  "elite": "نخبة",
+  "progression": {
+    "achievements": "إنجازات",
+    "unlocks": "فتح مزايا",
+    "challenges": "تحديات",
+    "elite": "نخبة"
+  }
+}

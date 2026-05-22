@@ -1,0 +1,184 @@
+{
+  "nav": {
+    "groups": {
+      "activity": "Activité",
+      "finance": "Finance",
+      "resources": "Ressources",
+      "account": "Compte"
+    },
+    "items": {
+      "dashboard": "Accueil",
+      "tree": "Arbre réseau",
+      "organization": "⚡ Organization Hub",
+      "mlm": "Compensation Intelligence",
+      "tree-join-requests": "Tree Join Requests",
+      "team": "Team & Referrals",
+      "team-guild": "Team HQ",
+      "team-found": "Found Your Team",
+      "agency-guild": "Discover Agencies",
+      "agency-leaderboard": "Agency Leaderboard",
+      "messages": "Messages",
+      "packages": "Forfaits & upgrades",
+      "wallet": "Portefeuille & C Money",
+      "finance": "Finance System",
+      "earnings": "Earnings & Commissions",
+      "ranks": "Ranks & Rewards",
+      "academy": "Academy",
+      "leads": "Lead Data",
+      "support": "Support",
+      "settings": "Paramètres",
+      "franchise": "Franchise Dashboard",
+      "progression": "⚡ Progression",
+      "customer-pearls": "⬡ Pearls Wallet",
+      "customer-vouchers": "Vouchers",
+      "customer-community": "Community",
+      "customer-membership": "Membership",
+      "admin": "Admin Dashboard",
+      "admin-users": "Users",
+      "admin-withdrawals": "Withdrawals",
+      "admin-commissions": "Commissions",
+      "admin-products": "Products",
+      "admin-orders": "Orders",
+      "admin-coupons": "Coupons",
+      "admin-banners": "Banners",
+      "admin-vouchers": "Vouchers",
+      "admin-settings": "Settings",
+      "admin-audit": "Audit Log",
+      "admin-finance": "Finance Hub",
+      "admin-deposits": "Deposits",
+      "admin-kyc": "KYC Review",
+      "admin-reports": "Reports",
+      "admin-course-enrollments": "Course Enrollments",
+      "admin-courses": "Courses (Academy)",
+      "sa-overview": "Platform Overview",
+      "sa-business": "Business Hub",
+      "sa-packages": "Packages",
+      "sa-upgrades": "Upgrade Paths",
+      "sa-ranks": "Ranks",
+      "sa-payments": "Payment Methods",
+      "sa-promotions": "Promotions",
+      "sa-feature-flags": "Feature Flags",
+      "sa-level-bonus": "Level Bonus",
+      "sa-settings": "Financial Settings",
+      "sa-admins": "Admins",
+      "sa-operations": "Operations",
+      "shop-buy": "Buy",
+      "shop-cart": "Cart",
+      "shop-orders": "Orders",
+      "shop-shipping": "Shipping Address",
+      "shop-subscriptions": "Subscriptions"
+    },
+    "shop": {
+      "label": "Boutique",
+      "subscriptions": "Abonnements"
+    }
+  },
+  "headers": {
+    "dashboard": {
+      "title": "Welcome",
+      "breadcrumbs": [
+        "Credo W",
+        "Marketer Hub",
+        "Home"
+      ]
+    },
+    "packages": {
+      "title": "Packages & Upgrades",
+      "breadcrumbs": [
+        "Credo W",
+        "Finance",
+        "Packages"
+      ]
+    },
+    "team_placement-tree": {
+      "title": "Network Tree",
+      "breadcrumbs": [
+        "Credo W",
+        "Team",
+        "Network Tree"
+      ]
+    },
+    "team_referrals": {
+      "title": "Team & Referrals",
+      "breadcrumbs": [
+        "Credo W",
+        "Team",
+        "Referrals"
+      ]
+    },
+    "agencies_discover": {
+      "title": "Agencies",
+      "subtitle": "Official organizations"
+    },
+    "agencies_leaderboard": {
+      "title": "Agency Leaderboard",
+      "subtitle": "Top organizations"
+    },
+    "earnings_wallet": {
+      "title": "Smart Wallet",
+      "breadcrumbs": [
+        "Credo W",
+        "Finance",
+        "Wallet"
+      ]
+    },
+    "earnings_team-commission": {
+      "title": "Earnings & Commissions",
+      "breadcrumbs": [
+        "Credo W",
+        "Finance",
+        "Commissions"
+      ]
+    },
+    "shop_buy": {
+      "title": "Buy",
+      "breadcrumbs": [
+        "Credo W",
+        "Shop",
+        "Buy"
+      ]
+    },
+    "shop_cart": {
+      "title": "Cart",
+      "breadcrumbs": [
+        "Credo W",
+        "Shop",
+        "Cart"
+      ]
+    },
+    "courses": {
+      "title": "Credo Academy",
+      "breadcrumbs": [
+        "Credo W",
+        "Resources",
+        "Academy"
+      ]
+    },
+    "support": {
+      "title": "Support",
+      "breadcrumbs": [
+        "Credo W",
+        "Support"
+      ]
+    },
+    "profile": {
+      "title": "Settings",
+      "breadcrumbs": [
+        "Credo W",
+        "Account"
+      ]
+    }
+  },
+  "topbar": {
+    "openMenu": "Open menu",
+    "breadcrumbLabel": "Breadcrumb",
+    "cart": "Cart",
+    "notifications": "Notifications"
+  },
+  "stats": {
+    "volume": "Business Volume",
+    "team": "Team",
+    "rank": "Rank",
+    "wallet": "Wallet"
+  }
+}

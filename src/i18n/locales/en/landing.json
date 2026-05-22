@@ -1,0 +1,173 @@
+{
+  "storyBeats": [
+    "Enter the ecosystem",
+    "Discover the opportunity",
+    "Understand the vision",
+    "See the system",
+    "Feel the progression",
+    "Understand rewards",
+    "Experience prestige",
+    "Join the movement"
+  ],
+  "hero": {
+    "eyebrow": "Digital organization platform · Next generation",
+    "title": "Credo W",
+    "titleEn": "Next-Generation Digital Organization",
+    "lead": "Intelligent infrastructure for digital business growth — leadership, agencies, expansion, and rewards in one ecosystem.",
+    "sub": "Not a website. An AI-powered digital business movement — for leaders building the future.",
+    "ctaDashboard": "Dashboard",
+    "ctaStart": "Begin your journey",
+    "ctaExplore": "Explore the ecosystem",
+    "stats": [
+      { "num": "01", "title": "Smart expansion", "en": "Smart Expansion" },
+      { "num": "02", "title": "Connected leadership", "en": "Connected Leadership" },
+      { "num": "03", "title": "Digital economy", "en": "Digital Economy" }
+    ]
+  },
+  "ecosystem": {
+    "title": "One integrated ecosystem",
+    "subtitle": "Connected opportunity layers — from onboarding to full organization leadership",
+    "layers": [
+      {
+        "title": "Opportunity layers",
+        "en": "Opportunity Layers",
+        "desc": "Multiple growth paths — from joining to building a full organization with clarity."
+      },
+      {
+        "title": "Digital agencies",
+        "en": "Digital Agencies",
+        "desc": "Discover, join, or launch an agency with a professional profile and live command center."
+      },
+      {
+        "title": "Operational AI",
+        "en": "Operational AI",
+        "desc": "Analytics, automation, and guidance — faster decisions with institutional confidence."
+      }
+    ]
+  },
+  "vision": {
+    "title": "Vision that turns ambition into structure",
+    "titleEn": "Vision That Scales Ambition",
+    "subtitle": "Credo W is a digital organization platform uniting leadership, teams, expansion, and rewards — so you feel part of a connected digital economy, not an isolated tool.",
+    "tags": [
+      { "label": "Strong start" },
+      { "label": "Connected teams" },
+      { "label": "Secure architecture" },
+      { "label": "Measurable growth" },
+      { "label": "Artificial intelligence" },
+      { "label": "Regional expansion" }
+    ]
+  },
+  "leadership": {
+    "pillars": [
+      {
+        "title": "Digital leadership",
+        "desc": "Decision tools, team vision, and growth metrics — at the level of leading tech institutions."
+      },
+      {
+        "title": "Intelligent organization",
+        "desc": "A clear structure linking people to agencies and opportunities without operational friction."
+      },
+      {
+        "title": "Collective success",
+        "desc": "A platform that rewards shared expansion — your growth strengthens the entire ecosystem."
+      }
+    ]
+  },
+  "organization": {
+    "features": [
+      { "label": "Live organization", "en": "Live Organization" },
+      { "label": "Connected teams", "en": "Connected Teams" },
+      { "label": "Growth metrics", "en": "Growth Metrics" },
+      { "label": "Agencies", "en": "Agency Layer" }
+    ]
+  },
+  "growth": {
+    "steps": [
+      { "step": "01", "title": "Enter the ecosystem", "desc": "Seamless onboarding via invite or agency — intelligent from the first moment." },
+      { "step": "02", "title": "Build your presence", "desc": "Team, agency, and metrics — all visible in one command center." },
+      { "step": "03", "title": "Activate your layer", "desc": "Packages and automatic upgrades unlock new opportunity layers." },
+      { "step": "04", "title": "Grow with confidence", "desc": "Wallet, rewards, and withdrawals — premium, transparent financial architecture." }
+    ]
+  },
+  "ranks": [
+    { "id": "starter", "label": "Starter", "ar": "Starter", "tier": 1 },
+    { "id": "builder", "label": "Builder", "ar": "Builder", "tier": 2 },
+    { "id": "leader", "label": "Leader", "ar": "Leader", "tier": 3 },
+    { "id": "elite", "label": "Elite", "ar": "Elite", "tier": 4 },
+    { "id": "legend", "label": "Legend", "ar": "Legend", "tier": 5 }
+  ],
+  "rewards": [
+    { "label": "C Money", "value": "Internal financial layer", "icon": "wallet" },
+    { "label": "Pearls", "value": "Loyalty & rewards", "icon": "gem" },
+    { "label": "Payouts", "value": "Secure withdrawals", "icon": "arrow" },
+    { "label": "Growth Pool", "value": "Expansion rewards", "icon": "percent" }
+  ],
+  "metrics": [
+    { "value": "12K+", "label": "Active leaders", "en": "Active Leaders" },
+    { "value": "840+", "label": "Digital agencies", "en": "Digital Agencies" },
+    { "value": "14", "label": "Markets", "en": "Markets" },
+    { "value": "99.2%", "label": "Ecosystem uptime", "en": "Uptime" }
+  ],
+  "testimonials": [
+    {
+      "quote": "Finally a platform that feels like building a digital institution — clarity, speed, and visual prestige changed how we lead our team.",
+      "name": "Sarah Al-Mansouri",
+      "role": "Agency leader",
+      "agency": "Credo Gulf",
+      "country": "UAE",
+      "rank": "Elite"
+    },
+    {
+      "quote": "Progression and ranks are not decoration — a real engine for ambition. The team feels inside an elite system.",
+      "name": "Karim Al-Rashid",
+      "role": "Expansion director",
+      "agency": "Vector Agency",
+      "country": "Saudi Arabia",
+      "rank": "Legend"
+    },
+    {
+      "quote": "From minute one you know this is different. Intelligence, motion, depth — like a funded product, not a demo site.",
+      "name": "Nadia Helmy",
+      "role": "Agency founder",
+      "agency": "Helios Digital",
+      "country": "Egypt",
+      "rank": "Leader"
+    }
+  ],
+  "cta": {
+    "title": "Ready to lead the next generation?",
+    "subtitle": "Join an ecosystem built for global scale — with institutional confidence from day one.",
+    "primary": "Start now",
+    "secondary": "Talk to Credo AI"
+  },
+  "footer": {
+    "product": "Product",
+    "company": "Company",
+    "legal": "Legal",
+    "newsletter": "Stay informed",
+    "newsletterPlaceholder": "Your email",
+    "subscribe": "Subscribe"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need before you join"
+  },
+  "sections": {
+    "ecosystem": {
+      "beat": "Discover the opportunity",
+      "eyebrow": "Credo W Ecosystem",
+      "title": "A scalable digital economy",
+      "titleEn": "Scalable Digital Ecosystem",
+      "subtitle": "Opportunity layers, agencies, and operational AI — one architecture for digital growth."
+    },
+    "cta": {
+      "beat": "Join the movement",
+      "title": "Join the digital movement",
+      "titleEn": "Join the Credo W Movement",
+      "subtitle": "Institutional-grade platform — start your journey or return to your dashboard.",
+      "footnote": "Instant setup · No friction · Premium experience",
+      "login": "Sign in"
+    }
+  }
+}

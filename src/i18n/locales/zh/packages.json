@@ -1,0 +1,18 @@
+{
+  "title": "Packages",
+  "subtitle": "Intelligent upgrade paths that unlock new opportunity layers",
+  "levels": {
+    "starter": "Starter",
+    "builder": "Builder",
+    "leader": "Leader",
+    "elite": "Elite",
+    "legend": "Legend"
+  },
+  "compare": "Compare packages",
+  "upgrade": "Upgrade",
+  "current": "Your current package",
+  "unlock": "Unlock the next level",
+  "benefits": "Benefits",
+  "evolution": "Evolution journey",
+  "ecosystem": "Package ecosystem"
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Rewards",
+  "subtitle": "Transparent digital economy — C Money, Pearls, and secure payouts",
+  "cMoney": "C Money",
+  "pearls": "Pearls",
+  "payouts": "Payouts",
+  "growthPool": "Growth pool",
+  "achievements": "Achievements",
+  "challenges": "Challenges",
+  "elite": "Elite",
+  "progression": {
+    "achievements": "Achievements",
+    "unlocks": "Feature unlocks",
+    "challenges": "Challenges",
+    "elite": "Elite"
+  }
+}

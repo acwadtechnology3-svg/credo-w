@@ -1,0 +1,243 @@
+/* Phase P4 — Guild / Team Foundation UI */
+
+.guild-wizard {
+  min-height: 100vh;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(123, 108, 246, 0.18), transparent),
+    linear-gradient(180deg, #05060d 0%, #0c0e1a 100%);
+  color: var(--text-1);
+  padding: 2rem 1.5rem;
+}
+
+.guild-wizard__hero {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 2rem;
+}
+
+.guild-wizard__flame {
+  font-size: 3rem;
+  animation: guild-pulse 2s ease-in-out infinite;
+}
+
+@keyframes guild-pulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 12px rgba(123, 108, 246, 0.4));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 28px rgba(232, 201, 106, 0.6));
+    transform: scale(1.05);
+  }
+}
+
+.guild-wizard__title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  background: linear-gradient(135deg, #e8c96a, #c4b8ff, #7b6cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.guild-step-card {
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--glass-1);
+  border: 1px solid var(--line-purple);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 0 40px rgba(123, 108, 246, 0.12);
+}
+
+.guild-step-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+}
+
+.guild-step-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--surface-3);
+  transition: all 0.3s;
+}
+
+.guild-step-dots span.active {
+  width: 24px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #7b6cf6, #e8c96a);
+}
+
+.guild-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--surface-1);
+  color: var(--text-1);
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.guild-input:focus {
+  outline: none;
+  border-color: var(--lavender);
+  box-shadow: 0 0 0 2px rgba(123, 108, 246, 0.25);
+}
+
+.guild-type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.guild-type-btn {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--text-2);
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.guild-type-btn.selected {
+  border-color: var(--lavender);
+  background: rgba(123, 108, 246, 0.2);
+  color: var(--text-1);
+}
+
+.guild-color-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.guild-preview-banner {
+  height: 100px;
+  border-radius: 12px;
+  margin: 12px 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+}
+
+.guild-preview-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  border: 2px solid var(--line-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.guild-btn-primary {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--credo-purple-dark), var(--credo-purple), var(--credo-purple-light));
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.guild-btn-secondary {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--text-2);
+  cursor: pointer;
+}
+
+.guild-profile {
+  min-height: 100vh;
+  background: #05060d;
+}
+
+.guild-profile__banner {
+  height: 200px;
+  position: relative;
+}
+
+.guild-profile__banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, #05060d 100%);
+}
+
+.guild-profile__body {
+  max-width: 900px;
+  margin: -60px auto 0;
+  padding: 0 1.5rem 2rem;
+  position: relative;
+}
+
+.guild-profile__header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.guild-profile__logo {
+  width: 88px;
+  height: 88px;
+  border-radius: 18px;
+  border: 3px solid var(--line-purple);
+  background: var(--surface-2);
+  box-shadow: 0 0 30px rgba(123, 108, 246, 0.35);
+}
+
+.guild-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  background: rgba(123, 108, 246, 0.2);
+  border: 1px solid var(--line-purple);
+  color: var(--lavender);
+  margin-left: 6px;
+}
+
+.guild-discover-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.guild-discover-card {
+  background: var(--glass-1);
+  border: 1px solid var(--glass-edge);
+  border-radius: 16px;
+  padding: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.guild-discover-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--lavender);
+}
+
+.guild-success-invite {
+  background: var(--surface-2);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.75rem;
+  word-break: break-all;
+  margin-top: 12px;
+}

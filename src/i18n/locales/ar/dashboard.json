@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "groups": {
+      "activity": "النشاط",
+      "finance": "المالية",
+      "resources": "الموارد",
+      "account": "الحساب"
+    },
+    "items": {
+      "dashboard": "الرئيسية",
+      "tree": "شجرة الشبكة",
+      "organization": "⚡ مركز المنظمة",
+      "mlm": "ذكاء التعويضات",
+      "tree-join-requests": "طلبات انضمام الشجرة",
+      "team": "الفريق والإحالات",
+      "team-guild": "مقر الفرق",
+      "team-found": "تأسيس الفريق",
+      "agency-guild": "اكتشاف الوكالات",
+      "agency-leaderboard": "تصنيف الوكالات",
+      "messages": "الرسائل",
+      "packages": "الباقات والترقية",
+      "wallet": "المحفظة و C Money",
+      "finance": "النظام المالي",
+      "earnings": "الأرباح والعمولات",
+      "ranks": "الرتب والمكافآت",
+      "academy": "الأكاديمية",
+      "leads": "شراء البيانات",
+      "support": "الدعم الفني",
+      "settings": "الإعدادات",
+      "franchise": "لوحة الامتياز",
+      "progression": "⚡ Progression",
+      "customer-pearls": "⬡ Pearls Wallet",
+      "customer-vouchers": "قسائم",
+      "customer-community": "المجتمع",
+      "customer-membership": "العضوية",
+      "admin": "لوحة المشرف",
+      "admin-users": "المستخدمون",
+      "admin-withdrawals": "السحوبات",
+      "admin-commissions": "العمولات",
+      "admin-products": "المنتجات",
+      "admin-orders": "الطلبات",
+      "admin-coupons": "الكوبونات",
+      "admin-banners": "البانرات",
+      "admin-vouchers": "القسائم",
+      "admin-settings": "الإعدادات",
+      "admin-audit": "سجل التدقيق",
+      "admin-finance": "مركز المالية",
+      "admin-deposits": "الإيداعات",
+      "admin-kyc": "مراجعة KYC",
+      "admin-reports": "التقارير",
+      "admin-course-enrollments": "تسجيلات الدورات",
+      "admin-courses": "الدورات (الأكاديمية)",
+      "sa-overview": "نظرة المنصة",
+      "sa-business": "مركز الأعمال",
+      "sa-packages": "الباقات",
+      "sa-upgrades": "مسارات الترقية",
+      "sa-ranks": "الرتب",
+      "sa-payments": "طرق الدفع",
+      "sa-promotions": "العروض",
+      "sa-feature-flags": "مفاتيح الميزات",
+      "sa-level-bonus": "عمولة المستويات",
+      "sa-settings": "الإعدادات المالية",
+      "sa-admins": "المشرفون",
+      "sa-operations": "عمليات",
+      "shop-buy": "شراء",
+      "shop-cart": "السلة",
+      "shop-orders": "الطلبات",
+      "shop-shipping": "عنوان الشحن",
+      "shop-subscriptions": "الاشتراكات"
+    },
+    "shop": {
+      "label": "تسوّق الآن",
+      "subscriptions": "الاشتراكات"
+    }
+  },
+  "headers": {
+    "dashboard": {
+      "title": "مرحباً",
+      "breadcrumbs": ["Credo W", "لوحة المسوّق", "الرئيسية"]
+    },
+    "packages": {
+      "title": "الباقات والترقية",
+      "breadcrumbs": ["Credo W", "المالية", "الباقات"]
+    },
+    "team_placement-tree": {
+      "title": "شجرة الشبكة",
+      "breadcrumbs": ["Credo W", "الفريق", "شجرة الشبكة"]
+    },
+    "team_referrals": {
+      "title": "الفريق والإحالات",
+      "breadcrumbs": ["Credo W", "الفريق", "الإحالات"]
+    },
+    "agencies_discover": {
+      "title": "الوكالات",
+      "subtitle": "منظمات رسمية"
+    },
+    "agencies_leaderboard": {
+      "title": "تصنيف الوكالات",
+      "subtitle": "أفضل المنظمات"
+    },
+    "earnings_wallet": {
+      "title": "المحفظة الذكية",
+      "breadcrumbs": ["Credo W", "المالية", "المحفظة"]
+    },
+    "earnings_team-commission": {
+      "title": "الأرباح والعمولات",
+      "breadcrumbs": ["Credo W", "المالية", "العمولات"]
+    },
+    "shop_buy": {
+      "title": "شراء",
+      "breadcrumbs": ["Credo W", "المتجر", "شراء"]
+    },
+    "shop_cart": {
+      "title": "السلة",
+      "breadcrumbs": ["Credo W", "المتجر", "السلة"]
+    },
+    "courses": {
+      "title": "Credo Academy",
+      "breadcrumbs": ["Credo W", "الموارد", "الأكاديمية"]
+    },
+    "support": {
+      "title": "الدعم الفني",
+      "breadcrumbs": ["Credo W", "الدعم"]
+    },
+    "profile": {
+      "title": "الإعدادات",
+      "breadcrumbs": ["Credo W", "الحساب"]
+    }
+  },
+  "topbar": {
+    "openMenu": "فتح القائمة",
+    "breadcrumbLabel": "مسار الصفحة",
+    "cart": "السلة",
+    "notifications": "الإشعارات"
+  },
+  "stats": {
+    "volume": "حجم الأعمال",
+    "team": "الفريق",
+    "rank": "الرتبة",
+    "wallet": "المحفظة"
+  }
+}

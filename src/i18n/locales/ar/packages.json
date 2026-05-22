@@ -1,0 +1,18 @@
+{
+  "title": "الباقات",
+  "subtitle": "مسارات ترقية ذكية تفتح طبقات فرص جديدة",
+  "levels": {
+    "starter": "Starter",
+    "builder": "Builder",
+    "leader": "Leader",
+    "elite": "Elite",
+    "legend": "Legend"
+  },
+  "compare": "قارن الباقات",
+  "upgrade": "ترقية",
+  "current": "باقتك الحالية",
+  "unlock": "افتح المستوى التالي",
+  "benefits": "المزايا",
+  "evolution": "رحلة التطور",
+  "ecosystem": "منظومة الباقات"
+}

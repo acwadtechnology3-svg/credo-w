@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=1440"/>
+  <title>Credo W · Premium Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/tokens.css"/>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <style>
+    /* Pin shake animation */
+    @keyframes pin-shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-8px); }
+      40%, 80% { transform: translateX(8px); }
+    }
+    .pin-shake { animation: pin-shake 0.4s ease-out; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" src="scripts/shell.jsx"></script>
+  <script type="text/babel" src="scripts/landing.jsx"></script>
+  <script type="text/babel" src="scripts/login.jsx"></script>
+  <script type="text/babel" src="scripts/dashboard.jsx"></script>
+  <script type="text/babel" src="scripts/tree.jsx"></script>
+  <script type="text/babel" src="scripts/wallet.jsx"></script>
+  <script type="text/babel" src="scripts/pages-finance.jsx"></script>
+  <script type="text/babel" src="scripts/pages-extra.jsx"></script>
+  <script type="text/babel" src="scripts/admin.jsx"></script>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    const PAGES = {
+      landing:   (p) => <LandingPage onGoto={p.set}/>,
+      login:     (p) => <LoginPage onGoto={p.set}/>,
+      dashboard: (p) => <Dashboard onNav={p.set}/>,
+      tree:      (p) => <TreePage onNav={p.set}/>,
+      wallet:    (p) => <WalletPage onNav={p.set}/>,
+      earnings:  () => <EarningsPage/>,
+      team:      () => <TeamPage/>,
+      ranks:     () => <RanksPage/>,
+      shop:      () => <ShopPage/>,
+      academy:   () => <AcademyPage/>,
+      support:   () => <SupportPage/>,
+      settings:  () => <SettingsPage/>,
+      leads:     () => <LeadsPage/>,
+      admin:     () => <AdminPage/>,
+    };
+
+    const LABELS = {
+      landing: '01 Landing', login: '02 Login', dashboard: '03 Dashboard', tree: '04 Tree',
+      wallet: '05 Wallet', earnings: '06 Earnings', team: '07 Team', ranks: '08 Ranks',
+      shop: '09 Shop', academy: '10 Academy', support: '11 Support', settings: '12 Settings',
+      leads: '13 Leads', admin: '14 Admin'
+    };
+
+    const SHORTCUTS = { d: 'dashboard', t: 'tree', w: 'wallet', e: 'earnings', m: 'team' };
+
+    const App = () => {
+      const [page, setPage] = useState('landing');
+      const [cmdkOpen, setCmdkOpen] = useState(false);
+
+      // Keyboard shortcuts
+      useEffect(() => {
+        const handler = (e) => {
+          // ⌘K / Ctrl+K
+          if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+            e.preventDefault();
+            setCmdkOpen(o => !o);
+            return;
+          }
+          // Single-key shortcuts (only when not typing)
+          const inField = ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName) || document.activeElement?.isContentEditable;
+          if (!inField && !e.metaKey && !e.ctrlKey && !e.altKey && SHORTCUTS[e.key.toLowerCase()]) {
+            if (page !== 'landing' && page !== 'login') {
+              setPage(SHORTCUTS[e.key.toLowerCase()]);
+            }
+          }
+        };
+        window.addEventListener('keydown', handler);
+        return () => window.removeEventListener('keydown', handler);
+      }, [page]);
+
+      const isFullScreen = page === 'landing' || page === 'login';
+      const Page = PAGES[page] || PAGES.dashboard;
+
+      if (isFullScreen) {
+        return (
+          <div data-screen-label={LABELS[page]}>
+            <Page set={setPage}/>
+          </div>
+        );
+      }
+
+      return (
+        <div data-screen-label={LABELS[page]} style={{ display: 'flex', minHeight: '100vh', alignItems: 'flex-start' }}>
+          <Sidebar current={page} onNav={setPage}/>
+          <div style={{ flex: 1, minWidth: 0, position: 'relative' }}>
+            {/* Inject cmdK trigger into topbar */}
+            <PageWithTopbar page={page} setPage={setPage} onCmdK={() => setCmdkOpen(true)} Page={Page}/>
+          </div>
+          <CommandPalette open={cmdkOpen} onClose={() => setCmdkOpen(false)} onNav={setPage}/>
+        </div>
+      );
+    };
+
+    // Wrap each page; topbar gets the cmdK handler via a context override.
+    // Since each page renders its own Topbar, we use a context provider to plumb the cmdK opener.
+    const TopbarContext = React.createContext({ onCmdK: () => {} });
+
+    // Patch Topbar globally so any page using <Topbar> auto-receives onCmdK
+    const OriginalTopbar = window.Topbar;
+    window.Topbar = (props) => {
+      const ctx = React.useContext(TopbarContext);
+      return <OriginalTopbar {...props} onCmdK={ctx.onCmdK}/>;
+    };
+
+    const PageWithTopbar = ({ page, setPage, onCmdK, Page }) => (
+      <TopbarContext.Provider value={{ onCmdK }}>
+        <Page set={setPage}/>
+      </TopbarContext.Provider>
+    );
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "ecosystem": "Ecosistema",
+  "agencies": "Agencias",
+  "packages": "Paquetes",
+  "rewards": "Recompensas",
+  "about": "About",
+  "faq": "FAQ",
+  "ai": "Credo AI",
+  "academy": "Academy",
+  "community": "Community",
+  "partners": "Partners",
+  "support": "Support",
+  "start": "Start",
+  "login": "Entrar",
+  "register": "Unirse",
+  "dashboard": "Dashboard",
+  "close": "Close",
+  "badges": {
+    "new": "New"
+  },
+  "explore": "Explore",
+  "menuTitle": "Ecosystem gate",
+  "loginHint": "Have an account?",
+  "sections": {
+    "ecosystem": "Ecosystem",
+    "vision": "Vision",
+    "organization": "Organization",
+    "progression": "Progression",
+    "credoAi": "Credo AI",
+    "cta": "Start"
+  },
+  "menus": {
+    "ecosystemDesc": "Opportunity layers and digital infrastructure",
+    "agenciesDesc": "Live agencies and connected leadership",
+    "packagesDesc": "Intelligent upgrade paths",
+    "rewardsDesc": "Transparent reward economy",
+    "aiDesc": "Guidance in your language",
+    "faqDesc": "Instant answers"
+  }
+}
